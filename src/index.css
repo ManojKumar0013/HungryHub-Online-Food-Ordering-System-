@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --color-brand-orange: #FF6B00;
+  --color-brand-yellow: #FFC107;
+  --color-brand-green: #2ECC71;
+  --color-brand-red: #E53935;
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(228, 228, 231, 0.8);
+  }
+
+  .dark .glass-panel {
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(39, 39, 42, 0.8);
+  }
+
+  .sleek-card {
+    background: #ffffff;
+    border: 1px solid rgba(228, 228, 231, 0.8);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .dark .sleek-card {
+    background: #0a0a0a;
+    border: 1px solid rgba(39, 39, 42, 0.9);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  }
+
+  .sleek-card:hover {
+    box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.08), 0 6px 16px -4px rgba(0, 0, 0, 0.04);
+  }
+
+  .soft-shadow {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  }
+
+  .soft-shadow-lg {
+    box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom smooth scroll and transitions */
+html, body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+html.dark {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.dark body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
