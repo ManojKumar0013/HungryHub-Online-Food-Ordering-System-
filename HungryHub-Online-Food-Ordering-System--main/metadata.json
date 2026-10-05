@@ -1,0 +1,6 @@
+{
+  "name": "HungryHub - Online Food Ordering System",
+  "description": "Full-stack Online Food Ordering System with Customer, Staff, Delivery Partner, and Admin modules, interactive menus, real-time order tracking, and DBMS metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
